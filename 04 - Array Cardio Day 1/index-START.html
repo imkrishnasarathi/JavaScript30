@@ -134,7 +134,7 @@
 			// 7. sort Exercise
 			// Sort the people alphabetically by last name
 
-      const alpha = people.sort(function (lastOne, nextOne) {
+			const alpha = people.sort(function (lastOne, nextOne) {
 				const parts = lastOne.split(", ");
 				console.log(parts);
 			});
@@ -158,15 +158,14 @@
 				"truck",
 			];
 
-      const transportation = data.reduce(function(obj, item) {
-        if(!obj[item]){
-          obj[item] = 0;
-        }
-        obj[item]++;
-        return obj;
-      }, {})
-      console.log(transportation);
-
+			const transportation = data.reduce(function (obj, item) {
+				if (!obj[item]) {
+					obj[item] = 0;
+				}
+				obj[item]++;
+				return obj;
+			}, {});
+			console.log(transportation);
 		</script>
 	</body>
 </html>
