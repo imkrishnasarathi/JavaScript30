@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Console Tricks!</title>
-  <link rel="icon" href="https://fav.farm/🔥" />
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Console Tricks!</title>
+		<link rel="icon" href="https://fav.farm/🔥" />
+	</head>
+	<body>
+		<p onClick="makeGreen()">×BREAK×DOWN×</p>
 
-  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+		<script>
+			const dogs = [
+				{ name: "Snickers", age: 2 },
+				{ name: "hugo", age: 8 },
+			];
 
-  <script>
-    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+			function makeGreen() {
+				const p = document.querySelector("p");
+				p.style.color = "#BADA55";
+				p.style.fontSize = "50px";
+			}
 
-    function makeGreen() {
-      const p = document.querySelector('p');
-      p.style.color = '#BADA55';
-      p.style.fontSize = '50px';
-    }
+			// Regular
+			console.log("hello");
 
-    // Regular
-    console.log('hello');
+			// Interpolated
+			console.log("Hello I am a %s boy!", "good");
+			let val = "good";
+			console.log(`Hello I am a ${val} boy!`);
 
-    // Interpolated
-    console.log('Hello I am a %s boy!', 'good');
-    let val = 'good'
-    console.log(`Hello I am a ${val} boy!`)
+			// Styled
+			console.log(
+				"%c I am some great text",
+				"font-size:50px; color: white; background: darkblue;"
+			);
 
-    // Styled
-    console.log('%c I am some great text', 'font-size:50px; color: white; background: darkblue;')
+			// warning!
+			console.warn("OH NOO!");
 
-    // warning!
-    console.warn('OH NOO!')
+			// Error :|
+			console.error("Not expected!");
 
-    // Error :|
-    console.error('Not expected!')
+			// Info
+			console.info("Crocodiles eat 3-4 people per year");
 
-    // Info
-    console.info('Crocodiles eat 3-4 people per year')
+			// Testing
+			const p = document.querySelector("p");
+			console.assert(p.classList.contains("ouch"), "That is wrong!");
 
-    // Testing
-    const p = document.querySelector('p')
-    console.assert(p.classList.contains('ouch'), 'That is wrong!')
+			// clearing
 
-    // clearing
+			// Viewing DOM Elements
 
-    // Viewing DOM Elements
+			// Grouping together
 
-    // Grouping together
+			// counting
 
-    // counting
-
-    // timing
-
-  </script>
-</body>
+			// timing
+		</script>
+	</body>
 </html>
