@@ -100,13 +100,14 @@
   const checkboxes = document.querySelectorAll('input[type=checkbox]');
 
   let lastChecked;
-  let inBetween = false;
 
   function checkHandler(e){
     if (e.shiftKey && e.target.checked){
+      let inBetween = false;
       checkboxes.forEach(checkbox => {
         if (checkbox === this || checkbox == lastChecked){
-          console.log('Nothing much, we can pass on!');
+          console.log('Passing On!');
+          inBetween = !inBetween;
         }
       });
     }
