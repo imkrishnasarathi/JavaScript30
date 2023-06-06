@@ -103,10 +103,15 @@
   let inBetween = false;
 
   function checkHandler(e){
-    console.log('let\'s go')
-    lastchecked = this;
+    if (e.shiftKey && e.target.checked){
+      checkboxes.forEach(checkbox => {
+        if (checkbox === this || checkbox == lastChecked){
+          console.log('Nothing much, we can pass on!');
+        }
+      });
+    }
+      lastchecked = this;
   }
-
   checkboxes.forEach(checkbox => checkbox.addEventListener('click', checkHandler));
 
 </script>
