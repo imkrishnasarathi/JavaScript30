@@ -99,8 +99,12 @@
 <script>
   const checkboxes = document.querySelectorAll('input[type=checkbox]');
 
-  function checkHandler(){
-    console.log('I am just a function')
+  let lastChecked;
+  let inBetween = false;
+
+  function checkHandler(e){
+    console.log('let\'s go')
+    lastchecked = this;
   }
 
   checkboxes.forEach(checkbox => checkbox.addEventListener('click', checkHandler));
