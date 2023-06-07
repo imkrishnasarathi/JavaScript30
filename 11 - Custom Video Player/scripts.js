@@ -11,5 +11,10 @@ function togglePlay() {
   video[method]();
 }
 
+function updateButton(){
+  console.log('Update!')
+}
 video.addEventListener('click', togglePlay);
+video.addEventListener('play', updateButton);
+
 toggle.addEventListener('click', togglePlay);
