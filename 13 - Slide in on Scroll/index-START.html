@@ -242,7 +242,10 @@
       const sliderImages = document.querySelectorAll(".slider-in");
 
 	  function checkSlide(e){
-		console.log(e);
+		sliderImages.forEach(sliderImage => {
+			const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
+
+		});
 	  }
 
 	  window.addEventListener('scroll', debounce(checkSlide));
