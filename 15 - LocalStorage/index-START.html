@@ -55,10 +55,13 @@
     }).join('');
   }
 
+  function toggleDone(e){
+    console.log(e);
+  }
+
   addItems.addEventListener('submit', addItem);
-
+  itemsList.addEventListener('click', toggleDone);
   populateList(items, itemsList);
-
 
 </script>
 
