@@ -59,6 +59,10 @@ const sortedBands = bands.sort((bandA, bandB)=>{
 
 const bandsElement = document.querySelector('#bands');
 
+bandsElement.innerHTML = sortedBands.map((item) => {
+  return `<li>${item}</li>`
+}).join('');
+
 console.log(sortedBands);
 
 </script>
