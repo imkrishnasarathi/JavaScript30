@@ -53,7 +53,9 @@ function strip(str){
   return str.replace(/^(a|an|the)/i, '').trim();
 }
 
-const sortedBands = Null;
+const sortedBands = bands.sort((bandA, bandB)=>{
+	return strip(bandA) > strip(bandB)?1:-1;1
+});
 
 </script>
 
