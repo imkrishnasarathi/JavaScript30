@@ -84,6 +84,7 @@
       items[index].done = false;
     });
     populateList(items, itemsList);
+    localStorage.setItem('items', JSON.stringify(items));
   }
   clear.addEventListener('click', clearAll);
 </script>
