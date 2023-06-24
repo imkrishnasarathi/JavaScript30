@@ -78,7 +78,7 @@
   const check = document.querySelector(".check-all");
   const uncheck = document.querySelector(".uncheck-all");
 
-  function clearAll(){
+  function uncheckAll(){
     if (items === []) return;
     items.forEach((element, index) => {
       items[index].done = false;
@@ -96,7 +96,7 @@
     localStorage.setItem('items', JSON.stringify(items));
   }
 
-  clear.addEventListener('click', clearAll);
+  uncheck.addEventListener('click', uncheckAll);
 </script>
 
 
