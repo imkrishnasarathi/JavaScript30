@@ -98,13 +98,14 @@
 
   function clearAll(){
     if (items === []) return;
-    items = [];
+    items.length = 0;
     populateList(items, itemsList);
     localStorage.setItem('items', JSON.stringify(items));
   }
 
   uncheck.addEventListener('click', uncheckAll);
   check.addEventListener('click', checkAll);
+  clear.addEventListener('click', clearAll);
 </script>
 
 
