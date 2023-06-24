@@ -86,6 +86,16 @@
     populateList(items, itemsList);
     localStorage.setItem('items', JSON.stringify(items));
   }
+
+  function checkAll(){
+    if (items === []) return;
+    items.forEach((element, index) => {
+      items[index].done = true;
+    });
+    populateList(items, itemsList);
+    localStorage.setItem('items', JSON.stringify(items));
+  }
+
   clear.addEventListener('click', clearAll);
 </script>
 
