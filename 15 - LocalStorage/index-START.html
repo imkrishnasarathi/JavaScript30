@@ -80,6 +80,9 @@
 
   function clearAll(){
     if (items === []) return;
+    items.forEach((element, index) => {
+      items[index].done = false;
+    });
   }
   clear.addEventListener('click', clearAll);
 </script>
