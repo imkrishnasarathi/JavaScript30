@@ -96,6 +96,13 @@
     localStorage.setItem('items', JSON.stringify(items));
   }
 
+  function clearAll(){
+    if (items === []) return;
+    items = [];
+    populateList(items, itemsList);
+    localStorage.setItem('items', JSON.stringify(items));
+  }
+
   uncheck.addEventListener('click', uncheckAll);
   check.addEventListener('click', checkAll);
 </script>
