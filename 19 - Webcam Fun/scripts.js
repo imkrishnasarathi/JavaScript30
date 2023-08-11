@@ -36,7 +36,7 @@ function takePhoto(){
 	const link = document.createElement('a');
 	link.href = data;
 	link.setAttribute('download', 'handsome');
-	link.innerHTML = `<img src="${data} alt="handsome guy>`;
+	link.innerHTML = `<img src="${data}" alt="handsome guy">`;
 	strip.insertBefore(link, strip.firstChild);
 }
 
