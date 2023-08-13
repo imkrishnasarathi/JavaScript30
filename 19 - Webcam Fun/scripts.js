@@ -24,7 +24,7 @@ function paintToCanvas(){
 	canvas.height = height;
 
 	setInterval(() => {
-		ctx.drawImage(video, 0,0, width, height)
+		ctx.drawImage(video, 0, 0, width, height)
 	}, 16);
 }
 
